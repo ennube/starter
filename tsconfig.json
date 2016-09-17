@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "system",
+        "module": "commonjs",
         "moduleResolution": "node",
         "isolatedModules": false,
         "jsx": "react",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "declaration": false,
+        "declaration": true,
         "noImplicitAny": false,
         "noImplicitUseStrict": false,
         "removeComments": true,
@@ -22,7 +22,6 @@
       "./node_modules/@types"
     ],
     "types": [
-        "jasmine",
         "node"
     ],
     "compileOnSave": false,
