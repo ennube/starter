@@ -3,6 +3,10 @@ logs
 *.log
 npm-debug.log*
 
+#Ennube packing & deployment
+build/deployment
+build/packing
+
 # Runtime data
 pids
 *.pid
