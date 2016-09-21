@@ -6,8 +6,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var runtime_1 = require('@ennube/runtime');
-var jws = require('jsonwebtoken');
-var jw = jws;
+var runtime_2 = require('@ennube/runtime');
+exports.dispatcher = runtime_2.dispatcher;
+var web = new runtime_1.http.Gateway('web');
 var IndexHTTPService = (function () {
     function IndexHTTPService() {
     }
@@ -16,10 +17,10 @@ var IndexHTTPService = (function () {
     IndexHTTPService.prototype.robots = function (request, response) {
     };
     __decorate([
-        runtime_1.http.GET('www', '/')
+        web.GET('/')
     ], IndexHTTPService.prototype, "index", null);
     __decorate([
-        runtime_1.http.GET('www', '/robots.txt')
+        web.GET('/robots.txt')
     ], IndexHTTPService.prototype, "robots", null);
     return IndexHTTPService;
 }());

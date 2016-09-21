@@ -1,16 +1,16 @@
+export {dispatcher} from '@ennube/runtime';
 import {http} from '@ennube/runtime';
-import * as jws from 'jsonwebtoken';
 
-const jw = jws;
+let web = new http.Gateway('web');
 
 export class IndexHTTPService {
 
-    @http.GET('www', '/')
+    @web.GET('/')
     index(request, response) {
 
     }
 
-    @http.GET('www', '/robots.txt') // FUTURE MOCK
+    @web.GET('/robots.txt') // FUTURE MOCK
     robots(request, response) {
 
     }
