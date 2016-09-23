@@ -1,18 +1,18 @@
-export {dispatcher} from '@ennube/runtime';
+// app.js
 import {http} from '@ennube/runtime';
 
 let web = new http.Gateway('web');
 
+declare function page(locales): string;
+
 export class IndexHTTPService {
 
     @web.GET('/')
-    index(request, response) {
-
-    }
-
-    @web.GET('/robots.txt') // FUTURE MOCK
-    robots(request, response) {
-
+    @web.GET('/{route+}')
+    index(req: http.Request, res: http.Response) {
+        res.send(page({
+              route: req.params.route
+        }));
     }
 
 }

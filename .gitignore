@@ -4,8 +4,7 @@ logs
 npm-debug.log*
 
 #Ennube packing & deployment
-build/deployment
-build/packing
+build/
 
 # Runtime data
 pids
